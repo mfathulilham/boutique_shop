@@ -1,0 +1,411 @@
+@import "../../styles/style.scss";
+
+.nav {
+  display: block;
+  background-color: $bg-white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  border-bottom: 1px solid $border-light-gray;
+}
+
+body {
+  overflow: auto;
+
+  &.is-hide {
+    overflow: hidden;
+  }
+}
+
+.nav__list {
+  padding: 16px;
+  position: relative;
+  display: flex;
+  background-color: $bg-white;
+  justify-content: space-between;
+  align-items: center;
+
+  &.is-active {
+    justify-content: flex-end;
+
+    @media only screen and (min-width: 1152px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.nav__logo {
+  margin: 0;
+  z-index: 0;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: $font-bentham;
+  font-weight: 400;
+  font-size: 24px;
+  z-index: 0;
+  line-height: 29px;
+}
+
+.nav__icon {
+  display: block;
+  position: relative;
+  animation: $animdation-fade;
+  cursor: pointer;
+
+  &.is-active {
+    display: none;
+
+    @media only screen and (min-width: 1152px) {
+      display: block;
+    }
+  }
+}
+
+.nav__icon-item {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: $bg-white;
+  border: none;
+}
+
+.nav__icon-cart {
+  margin-left: 12px;
+}
+
+.nav__menu {
+  position: relative;
+  display: block;
+  background-color: $bg-white;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  animation: $animdation-fade;
+
+  &.is-active {
+    display: none;
+
+  }
+
+  @media only screen and (min-width: 1152px) {
+    display: none;
+  }
+}
+
+.nav__close {
+  display: none;
+  position: relative;
+  padding: 0;
+  z-index: 5;
+  background-color: $bg-white;
+  border: none;
+  cursor: pointer;
+  animation: $animdation-fade;
+
+  &.is-active {
+    display: block;
+
+    @media only screen and (min-width: 1152px) {
+      display: none;
+    }
+  }
+}
+
+.nav__mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 100%;
+  min-height: calc(100vh - 56px);
+  overflow-y: auto;
+  background-color: $bg-white;
+  
+  &.is-active {
+    display: block;
+
+    @media only screen and (min-width: 1152px) {
+      display: none;
+    }
+  }
+}
+
+.nav__m-list {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 68px;
+  animation: $animdation-fade;
+  // max-height: calc(100vh - 140px);
+}
+
+.nav__m-link {
+  cursor: pointer;
+  font-family: $font-raleway;
+  position: relative;
+  background-color: $bg-light-gray;
+  padding: 24px 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+
+.nav__ml-title {
+  text-decoration: none;
+  color: $text-light-black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav__ml-desc {
+  margin: 6px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.nav__ml-img {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nav__content, .nav__item {
+  display: none;
+}
+
+// Smaller Device < 320px
+@media only screen and (max-width: 320px) {
+  .nav__logo {
+    padding-right: 0;
+  }
+
+  .nav__icon-cart {
+    margin-left: 0;
+  }
+
+  .collection-wrapper {
+    gap: 14px;
+  }
+
+  .discover-wrapper {
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .nav__list .nav__logo {
+    padding-right: 0;
+  }
+
+  .nav__icon-cart {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav__list {
+    padding: 16px 48px;
+
+  }
+  
+  .nav__icon {
+    padding-right: 16px;
+    
+  }
+  .nav__icon-user {
+    margin-right: 24px;
+  }
+  
+  .nav__m-wrapper {
+    padding: 0 48px;
+  }
+}
+
+// Tablet Device >= 768px
+
+@media only screen and (min-width: 768px) {
+  
+  .container {
+    padding: 16px 48px;
+  }
+
+  .nav__list {
+    padding: 16px 48px;
+  }
+
+  .nav__icon {
+    padding-right: 16px;
+  }
+  
+  .nav__icon-user {
+    margin-right: 24px;
+  }
+
+  .nav__m-list {
+    padding: 0 48px;
+  }
+}
+
+// Desktop Device >= 1152px
+@media only screen and (min-width: 1152px) {
+
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .nav {
+    background-color: $bg-white;
+    z-index: 30;
+  }
+
+  .nav__list {
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 64px;
+    gap: 0px;
+  }
+  
+  .nav__logo {
+    position: relative;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    padding-right: 8px;
+  }
+
+  // DROPDOWN
+  .nav__item {
+    display: block;
+  }
+
+  .nav__link {
+    margin: 0;
+    // padding: 20px 0;
+    width: 145px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__link-title {
+    font-family: $font-raleway;
+    color: $text-light-black;
+    text-decoration: none;
+    font-size: 14px;  
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .nav__link-desc {
+    display: none;
+  }
+  
+  .nav__content {
+    background-color: $bg-white;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    // padding-left: 64px;
+    margin-top: 1px;
+  }
+
+  .nav__item:hover .nav__link-title {
+    padding-bottom: 8px;
+    font-weight: 600;
+    border-bottom: 1px solid $text-gold;
+    transform: translateY(4px);
+  }
+
+  .nav__item:hover .nav__content {
+    display: block;
+    padding: 18px 0 18px 64px;
+    animation: $animdation-fade;
+
+    .nav__c-row {
+      display: flex;
+      gap: 64px;
+      font-family: $font-raleway;
+      flex-grow: 5;
+    }
+  }
+  
+  .nav__item:hover .nav__c-column {
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-light-black;
+    
+    .nav__c-title {
+      margin: 0;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 16px;
+    }
+
+    .nav__c-link a{
+      text-decoration: none;
+      color: $text-light-black;
+      display: block;
+      margin-bottom: 24px;
+      line-height: 16px;
+    }
+    
+    .nav__c-link a:hover{
+      color: $text-gold;
+    }
+
+    .nav__c-list {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav__c-item {
+      display: block;
+    }
+
+    .nav__c-img {
+      display: block;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .nav__c-desc{
+      text-align: center;
+      margin-top: 8px;
+      line-height: 16px;
+    }
+  }
+
+  .nav__icon {
+    padding-left: 24px;
+    padding-right: 16px;
+  }
+  .nav__icon-item {
+    padding: 0;
+  }
+
+  .nav__icon-user {
+    padding-right: 34px;
+    margin-right: 0;
+  }
+  
+  .nav__icon-cart {
+    margin: 0;
+  }
+}

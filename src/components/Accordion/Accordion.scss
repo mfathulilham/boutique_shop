@@ -1,0 +1,22 @@
+@import "../../styles/style.scss";
+
+.accordion, .accordion-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: $bg-white;
+  cursor: pointer;
+  padding: 0 2px 0 0;
+
+  &:hover, &:focus, &:active {
+    outline: none;
+  }
+}
+
+.accordion__title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}

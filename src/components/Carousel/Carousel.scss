@@ -1,0 +1,28 @@
+@import "../../styles/style.scss";
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  border-radius: 50%;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.img__next {
+  position: absolute;
+  top: 196px;
+  right: -269px;
+}
+
+.img__prev {
+  position: absolute;
+  top: 196px;
+  left: 16px;
+}
+
+.layout {
+  position: relative;
+  width:100%;
+}

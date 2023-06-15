@@ -1,0 +1,40 @@
+@import "../../styles/style.scss";
+
+.skeleton__product {
+  border-radius: 5px;
+  animation: $animation-ping;
+}
+
+.skeleton__p-list {
+  display: flex;
+  gap: 8px;
+}
+
+.skeleton__item {
+  display: flex;
+  gap: 12px;
+}
+
+.image {
+  width: 150px;
+  height: 200px;
+}
+
+.text-40 {
+  width: 100%;
+  height: 16px;
+}
+
+.text-100 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  height: 16px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1152px) {
+  .image {
+    width: 244px;
+    height: 325px;
+  }
+}

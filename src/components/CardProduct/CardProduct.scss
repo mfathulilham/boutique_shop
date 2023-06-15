@@ -1,0 +1,155 @@
+@import "../../styles/style.scss";
+
+.plist-c-item {
+  flex: 45%;
+}
+.card {
+  text-decoration: none;
+  color: $text-light-black;
+}
+
+.card__header {
+  position: relative;
+}
+
+.card__off {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $text-white
+}
+
+.card__subtract {
+  position: absolute;
+  height: 42px;
+  width: 28px;
+  top: 0;
+  right: 8px;
+}
+
+.card__decor-2 {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  background-color: $bg-light-gray2;
+  color: $text-white;
+  padding: 2px 8px;
+  border-radius: 28px;
+}
+
+.card__main {
+  position: relative;
+  padding-top: calc((325 / 244) * 100%);
+
+}
+
+.card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card__desc {
+  width: 144px;
+  padding-left: 8px;
+}
+
+.card__d-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  margin: 12px 0 8px;
+}
+
+.card__d-price {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 2px;
+  line-height: 16px;
+}
+
+.card__d-discount {
+  color: $text-gray2;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  margin: 0;
+  text-decoration: line-through;
+}
+
+// @media only screen and (min-width: 768px) {
+//   .card__item {
+//     flex: 30%;
+//   }
+// }
+
+@media only screen and (min-width: 1152px) {
+	// .card__item {
+  //   flex: 30%;
+  // }
+
+  .card__desc {
+    width: 236px;
+    padding-left: 8px;
+  }
+  
+  .card__d-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .card__off {
+    top: 4px;
+    right: 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .card__subtract {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    height: 65px;
+    width: 43px;
+  }
+
+  .card__decor-2 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 4px 12px;
+  }
+
+  .card__d-desc {
+    display: flex;
+    align-items: center;  
+  }
+  
+  .card__d-price {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .card__d-discount {
+    padding-left: 8px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

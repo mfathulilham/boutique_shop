@@ -1,0 +1,7 @@
+@import "../../styles/style.scss";
+
+input {
+  &.is-active {
+    border: 1px solid $red-validation;
+  }
+}

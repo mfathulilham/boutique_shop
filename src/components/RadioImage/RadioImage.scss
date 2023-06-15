@@ -1,0 +1,28 @@
+@import "../../styles/style.scss";
+
+.radio__label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .radio__ring {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+  }
+  .radio__label input:checked ~ .radio__ring {
+    border: 1px solid $bg-gold;
+  }
+  
+  .radio__label .radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }

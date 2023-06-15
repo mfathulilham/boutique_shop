@@ -1,0 +1,75 @@
+@import "../../styles/style.scss";
+
+.skeleton__header {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2px;
+  margin-top: 18px;
+  margin-bottom: 16px;
+}
+
+.skeleton {
+  // overflow: hidden;
+  border-radius: 5px;
+  height: 16px;
+  animation: $animation-ping;
+}
+
+.skeleton__header-2 {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.skeleton__f-list {
+  padding-left: 18px;
+
+  @media screen and (min-width: 1152px) {
+    padding-left: 0;
+  }
+}
+
+.skeleton__item {
+  display: flex;
+  gap: 12px;
+}
+
+.skeleton__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.skeleton-10 {
+  width: 18px;
+}
+
+.skeleton-30 {
+  width: 60px;
+}
+
+.skeleton-50 {
+  width: 100px;
+  margin-bottom: 16px;
+}
+
+.skeleton-100 {
+  width: 100%;
+}
+
+.skeleton__list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.skeleton-20-ring {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  animation: $animation-ping;
+}

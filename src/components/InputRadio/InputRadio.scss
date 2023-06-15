@@ -1,0 +1,61 @@
+@import "../../styles/style.scss";
+
+.inputradio {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  padding-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.inputradio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio__check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.inputradio:hover input ~ .radio__check {
+  background-color: #ccc;
+}
+
+.inputradio input:checked ~ .radio__check {
+  background-color: $bg-gold;
+}
+
+.radio__check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.inputradio input:checked ~ .radio__check:after {
+  display: block;
+}
+
+.inputradio .radio__check:after {
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $bg-white;
+}

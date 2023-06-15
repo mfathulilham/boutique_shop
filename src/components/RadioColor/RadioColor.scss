@@ -1,0 +1,73 @@
+@import "../../styles/style.scss";
+
+// RADIO CUSTOM
+/* Customize the label (the container) */
+.c-content-color {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.c-content-color .radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+// .content-color:hover input ~ .checkmark-radio {
+  // background-color: #ccc;
+// }
+
+/* When the radio button is checked, add a blue background */
+.content-color input:checked ~ .checkmark-radio {
+  border: 1px solid $bg-gold;
+  // outline:1px solid $bg-gold;
+}
+
+.pick-order input:checked ~ .checkmark-radio {
+  border: 1px solid $bg-gold;
+  // outline:1px solid $bg-gold;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.c-content-color input:checked ~ .checkmark-radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+// .c-content-color .checkmark-radio:after {
+//   top: 10px;
+//   left: 10px;
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 50%;
+//   background: white;
+// }
+
+// RADIO COLOR BUTTON

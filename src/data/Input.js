@@ -1,0 +1,1 @@
+export const inputSelect = ['Sort', 'Best Selling', 'Highest Price', 'Lowest Price', 'Most Popular'];

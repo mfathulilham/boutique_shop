@@ -1,0 +1,255 @@
+@import "../../styles/style.scss";
+
+.modal {
+    position: fixed; 
+    z-index: 35; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+  }
+
+
+.register {
+  display: block;
+  background-color: $bg-white;
+  margin: 0 auto;
+  border: 1px solid #888;
+  font-family: $font-raleway;
+  padding: 18px 16px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+
+  .label{
+    color: $text-light-black;
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  input {
+    margin-top: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    line-height: 16px;
+    padding: 11px 12px;
+    border: 1px solid $border-light-gray;
+    // color: $bg-light-gray
+    &::placeholder { 
+      color: $text-gray2;
+      opacity: 1; 
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $text-gray2;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $text-gray2;
+    };
+
+    &.is-active {
+      border: 1px solid $red-validation;
+    }
+  }
+
+  input[type="date"] {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-gray2;
+    text-transform: uppercase;
+    padding-left: 61px;
+    position: relative;
+
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      position: absolute;
+      // color: $text-light-black;
+      // filter: grayscale(1) invert(1);
+      left: 0;
+      // padding: 12px;
+      padding: 12px 165px;
+      right: 0;
+      z-index: 10;
+    }
+
+    &.is-change {
+      color: $text-light-black;
+    }
+  }
+
+  .date-wrapper {
+    position: relative;
+    margin-top: 12px;
+
+    .img-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 8px 0;
+      padding: 4px 16px 4px 12px;
+      border-right: 1px solid $border-light-gray;
+      z-index: 0;
+    }
+  }
+
+  .forgot{
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $bg-gold;
+  }
+  
+  .password, .password2 {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .contact {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .second-check {
+    margin: 0;
+
+    .link {
+      color: $text-light-black;
+    }
+  }
+}
+
+.form-control-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 44px;
+  column-gap: 12px;
+
+  .label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  input {
+    margin-top: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    width: 100%;
+    line-height: 16px;
+    padding: 12px;
+    border: 1px solid $border-light-gray;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $text-gray2;
+      opacity: 1; /* Firefox */
+    }
+    
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $text-gray2;
+    }
+    
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $text-gray2;
+    };
+
+    &.is-active {
+      border: 1px solid $red-validation;
+    }
+  }
+}
+
+.inputradio__list {
+  display: flex;
+  gap: 52px;
+  margin-top: 12px;
+}
+
+.email-validation, .email2-validation, .date-validation, .contact-validation, .pass-validation, .first-validation, .second-validation, .pass2-validation, .pass3-validation {
+  display: none;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: $red-validation;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+.checkbox__wrapper {
+  margin-top: 24px;
+}
+
+.checkbox__wrapper-2 {
+  transform: translateY(-16px);
+}
+
+.form-control-3 {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.register-footer {
+  margin-top: 252px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+
+
+  .btn-register {
+    width: 100%;
+    height: 40px;
+  }
+
+  .text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $bg-light-gray2;
+
+    .link-signup {
+      font-weight: 600;
+      color: $text-gold;
+    }
+  }
+}
+
+.register-footer {
+  margin-top: 8px;
+}
+  
+  
+@media only screen and (min-width: 768px) {
+  .register {
+    max-width: 348px;
+  }
+}
+
+@media only screen and (min-width: 1152px) {
+  .register {
+    margin: 138px auto;
+  }
+
+  .form-control-2 {
+    margin-top: 24px;
+  }
+}
+  

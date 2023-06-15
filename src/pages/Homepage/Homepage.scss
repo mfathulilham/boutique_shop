@@ -1,0 +1,285 @@
+@import "../../styles/style.scss";
+
+// MAIN SHOP
+.main {
+  padding: 0;
+  font-family: $font-raleway;
+}
+
+// CAMELIA
+.camelia {
+  display: block;
+  width: 100%;
+  font-family: $font-raleway;
+}
+
+.camelia__list {
+  display: flex;
+  flex-direction: column;
+}
+  
+.camelia__item {
+  flex: 100%;
+  padding: 23px 16px;
+  color: $text-light-black;
+  display: flex;
+  flex-direction: column;
+}
+
+.camelia__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.camelia__desc {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 16px 0 24px;
+  line-height: 25px;
+}
+
+.camelia__btn {
+  width: 200px;
+  height: 40px;
+}
+
+.camelia__img-wrap {
+  flex: 100%;
+}
+
+.camelia__img {
+  display: block;
+  height: auto;
+  width: 100%;
+  height: 100%;
+}
+
+// COLLECTION
+.collection {
+  text-align: center;
+}
+
+.collection__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 17px;
+  line-height: 23px;
+}
+
+.collection__desc {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 17px;
+  margin-bottom: 24px;
+}
+
+.collection__btn {
+  max-width: 160px;
+  height: 40px;
+  margin: 0 auto;
+}
+  
+.collection__list {
+  margin-top: 32px;
+}
+
+.collection__list-wrap {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+
+// MAIN DISCOVER
+.discover__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.discover__list {
+  padding-bottom: 0 0 72px 0;
+}
+
+.discover__item {
+  flex: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.discover__img-wrap {
+  flex: 50%;
+}
+
+.discover__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.discover__content {
+  padding-bottom: 24px;
+}
+
+.discover__c-title {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 16px 0 0;
+  line-height: 16px;
+}
+
+.discover__c-desc {
+  margin: 8px 0 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.discover__c-link {
+  color: $text-gold;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+@media only screen and (max-width: 320px) {
+  .collection__list-wrap {
+    gap: 14px;
+  }
+
+  .discover__list {
+    padding: 0 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .camelia__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .camelia__item {
+    flex: 50%;
+    padding-left: 48px;
+    padding-right: 64px;
+  }
+
+  .camelia__btn {
+    width: 212px;
+  }
+
+  .camelia-img-wrap {
+    flex: 50%;
+  }
+
+  .container {
+    padding: 16px 48px;
+  }
+
+  .collection__list-wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .discover__list {
+    display: flex;
+    gap: 48px;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1152px) {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .camelia__list {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;  
+  }
+
+  .camelia__item {
+    flex: 45%;
+    padding: 70px 0 70px 64px;
+  }  
+
+  .camelia__desc {
+    font-size: 14px;
+    line-height: 29px;
+    margin: 24px 68px 40px 0;
+  }
+
+  .camelia__img-wrap {
+    flex: 50%;
+  }
+
+  .collection__title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .collection__desc {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  // DISCOVER
+
+  .discover {
+    margin-bottom: 96px;
+  }
+  
+  .discover__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .discover__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+  }
+
+  .discover__c-desc {
+    padding-right: 64px;
+  }
+
+  .discover__item {
+    flex: 50%;
+  }
+
+  .discover__content {
+    padding-bottom: 0;
+  }
+
+  .discover__c-title {
+    font-size: 18px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  
+  .discover__c-desc {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .discover__c-link {
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
